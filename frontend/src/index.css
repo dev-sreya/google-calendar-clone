@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Google Calendar Design System */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+    
+    /* Google Blue - Primary brand color */
+    --google-blue: 217 89% 51%;
+    --google-blue-hover: 217 89% 45%;
+    --google-blue-light: 217 89% 96%;
+    
+    /* Calendar specific colors */
+    --calendar-border: 220 13% 86%;
+    --calendar-gray: 0 0% 60%;
+    --calendar-light-gray: 0 0% 98%;
+    --calendar-hover: 0 0% 96%;
+    
+    /* Semantic colors */
+    --primary: 217 89% 51%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 217 89% 96%;
+    --accent-foreground: 217 89% 51%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 86%;
+    --input: 220 13% 91%;
+    --ring: 217 89% 51%;
+    
+    --radius: 0.25rem;
+    
+    /* Transitions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 95%;
+    
+    --google-blue: 217 89% 51%;
+    --google-blue-hover: 217 89% 55%;
+    --google-blue-light: 217 89% 20%;
+    
+    --calendar-border: 0 0% 20%;
+    --calendar-gray: 0 0% 60%;
+    --calendar-light-gray: 0 0% 15%;
+    --calendar-hover: 0 0% 20%;
+    
+    --primary: 217 89% 51%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: 217 89% 20%;
+    --accent-foreground: 217 89% 51%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 217 89% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom Calendar Styles */
+@layer components {
+  .calendar-cell {
+    @apply border border-calendar-border min-h-[120px] p-1 transition-colors hover:bg-calendar-hover cursor-pointer;
+  }
+  
+  .calendar-day-number {
+    @apply text-sm font-medium text-foreground;
+  }
+  
+  .calendar-today {
+    @apply bg-google-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold;
+  }
+  
+  .calendar-other-month {
+    @apply text-calendar-gray;
+  }
+  
+  .time-slot {
+    @apply h-12 relative hover:bg-calendar-hover transition-colors;
+  }
+  
+  .time-slot::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 border-t border-calendar-border;
+  }
+  
+  .google-button {
+    @apply px-4 py-2 rounded hover:bg-calendar-hover transition-colors text-sm font-medium;
+  }
+  
+  .google-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-google-blue-hover;
+  }
+}
+
+/* Custom Scrollbar Styles - Always visible */
+@layer utilities {
+  /* For Webkit browsers (Chrome, Safari, Edge) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f3f4;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #dadce0;
+    border-radius: 8px;
+    border: 3px solid #f1f3f4;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #bdc1c6;
+  }
+
+  /* For Firefox */
+  .custom-scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: #dadce0 #f1f3f4;
+  }
+
+  /* Hide scrollbar but keep scroll functionality */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
