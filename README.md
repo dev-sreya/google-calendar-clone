@@ -1,4 +1,4 @@
-# Exact View Calendar
+# Google Calendar Clone
 
 A modern, feature-rich calendar application inspired by Google Calendar, built with React, TypeScript, and FastAPI. This application provides a seamless calendar experience with month, week, and day views, event management, and intelligent event overlap handling.
 
