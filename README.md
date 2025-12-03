@@ -16,6 +16,7 @@ A modern, feature-rich calendar application inspired by Google Calendar, built w
 - [Contributing](#contributing)
 
 ---
+https://github.com/user-attachments/assets/73580cff-bffb-4e55-8a34-f3e71139f73e
 
 ## ✨ Features
 
