@@ -4,6 +4,7 @@ A modern, feature-rich calendar application inspired by Google Calendar, built w
 
 ![Calendar Application](https://img.shields.io/badge/React-18.3-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green) ![Vite](https://img.shields.io/badge/Vite-5.4-purple)
 
+https://github.com/user-attachments/assets/73580cff-bffb-4e55-8a34-f3e71139f73e
 ## 📋 Table of Contents
 
 - [Features](#features)
@@ -16,7 +17,6 @@ A modern, feature-rich calendar application inspired by Google Calendar, built w
 - [Contributing](#contributing)
 
 ---
-https://github.com/user-attachments/assets/73580cff-bffb-4e55-8a34-f3e71139f73e
 
 ## ✨ Features
 
